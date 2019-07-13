@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Game</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-
-    <div id = "startScreen">
-        <button type="button" class="startButton">Start</button>
-            <div class = "container">
-                <div class = "title">Boston Terrier Trivia!
+    <div id="wrapper">
+        <div id="subwrapper">
+            <button type="button" class="start">Start</button>
                 </div>
-                <div class = "row" id = "timer">
+            <div class="container">
+                <div class="title">Boston Terrier Trivia!</div>
+                <div class="row" id="timer">
                     <h1>Time Left:</h1>
                 </div>
-                <div class = "row"><h2>What were Boston terriers originally bred for?</h2>
+                <div class="row">
+                    <div class="col-md-12 text-center" id='question-0'>
+                        <h2>What were Boston terriers originally bred for?</h2>
+                        <div id='options-0'></div>
+                    </div>
                 </div>
-                <div class = "row"><h2>Which group do Boston terriers belong to?</h2>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>Which group do Boston terriers belong to?</h2>
+                        <div id='options-1'></div>
+                    </div>
                 </div>
-                <div class = "row"><h2>Boston terriers are the state dog for which state?</h2>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>Boston terriers are the state dog for which state?</h2>
+                        <div id='options-2'></div>
+                    </div>
                 </div>
-                <div class = "row"><h2>True or false? Boston terriers were the first official breed created in the US.</h2>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>True or false? Boston terriers were the first official breed created in the US.</h2>
+                        <div id='options-3'></div>
+                    </div>
                 </div>
-                <div class = "row"><h2>True or false? Boston terriers are the best dogs.</h2>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>True or false? Boston terriers are the best dogs.</h2>
+                        <div id='options-4'></div>
+                    </div>
                 </div>
-                <button type="button" class="btn btn-primary"><p>Submit</p></button>
+                <button type="button" class="btn btn-primary">
+                    <p>Submit</p>
+                </button>
             </div>
-        </button>
-</div>
+            </button>
+        </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/assets/javascript/app.js"></script>
+    <script src="assets/javascript/app.js"></script>
+
 </body>
+
 </html>

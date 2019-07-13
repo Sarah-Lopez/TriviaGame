@@ -1,14 +1,18 @@
 body {
-    background-image: URL("http://a9ragphotography.com/wp-content/uploads/2017/05/grass-background-28.jpg")
+    background-image: URL("https://a9ragphotography.com/wp-content/uploads/2017/05/grass-background-28.jpg")
 }
 
 .container {
     background-color: lavender;
-    width: 80%;
+    /* width: 80%;
     Height: 80%;
     margin-top: 40px;
     margin-bottom: 50px;
-    padding: 20px;
+    padding: 20px; */
+}
+
+.start {
+
 }
 .title {
     font-size: 50px;
@@ -30,6 +34,9 @@ h2 {
     margin: 0 auto;
     padding: 50px;
 }
+
+
 p {
     text-align: center;
 }
+
