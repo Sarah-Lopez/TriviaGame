@@ -85,27 +85,27 @@ var questions = [{
   question: "Where does the Boston Terrier breed originate from?",
   answers: ["Texas", "Massachusetts", "New York", "Washington"],
   correctAnswer: "Massachusetts",
-  image: "assets/images/toystory.gif"
+  image: "assets/images/bostonUniversity.png"
 }, {
   question: "What year was the breed recognized by the AKC?",
   answers: ["1933", "2016", "1771", "1893"],
   correctAnswer: "1893",
-  image: "assets/images/spicegirls.gif"
+  image: "assets/images/vintageBt.jpg"
 }, {
   question: "What is the Boston Terrier's official nicname?",
   answers: ["American gentleman", "Pug's cousin", "Tuxedo dog", "Penguin dog"],
   correctAnswer: "American gentleman",
-  image: "assets/images/bulls.gif"
+  image: "assets/images/dapperBoston.jpg"
 }, {
   question: "Which group do Boston Terriers belong to?",
   answers: ["Toy", "Hound", "Non-sporting", "Herding"],
   correctAnswer: "Non-sporting",
-  image: "assets/images/nirvanabark.gif"
+  image: "assets/images/btNonsporting.jpg"
 }, {
   question: "Which of the following is the most commonly reported biological feature of Boston Terriers?",
   answers: ["Excellent sight", "Flatulence", "Long tail", "Large size"],
   correctAnswer: "Flatulence",
-  image: "assets/images/lionking.gif"
+  image: "assets/images/bostonToot.jpg"
 }];
 
 // Variable to hold our setInterval
