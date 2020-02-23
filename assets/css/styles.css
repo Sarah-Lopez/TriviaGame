@@ -1,89 +1,52 @@
-/* 
-body {
-    background-image: URL("https://a9ragphotography.com/wp-content/uploads/2017/05/grass-background-28.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#wrapper {
-    background-color: rgb(193, 193, 241);
-    margin: 5%;
-    padding: 5%;
-}
-
-.sub-wrapper {
-
-}
-
-h1 {
-    text-align: center;
-    font-size: 30px;
-    font-family: fantasy;
-    margin: 0 auto;
-    padding: 50px;
-}
-
-h2 {
-    font-size: 20px;
-    font-family: fantasy;
-    margin: 0 auto;
-    padding: 50px;
-}
-
-p {
-    text-align: center;
-}
-
-#start {
-    
-} */
-
-
-
-html,
-body {
-  height: 100%;
-}
 
 body {
   text-align: center;
-  background-image: url("../images/tacky.jpg");
+  background-image: url("../images/btBackground3.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right;
 }
 
 #wrapper {
-  width: 960px;
-  height: 95%;
+  max-width: 50%;
+  height: 80%;
   box-sizing: border-box;
   margin: 2.5% auto;
+  margin-right: 40%;
   background-color: #fff17a;
 }
 
 #sub-wrapper {
   position: relative;
-  top: 15%;
+  margin-top: auto;
 }
 
 button {
   display: block;
-  width: 50%;
-  height: 20%;
-  margin: 0 auto;
+  width: auto;
+  height: auto;
+  margin: 5px;
   font-size: 42px;
   cursor: pointer;
   background: transparent;
   border: 0;
 }
 
+.answer-button{
+  margin: 20px;
+}
+
 img {
   height: 200px;
+  margin-top: 10%;
 }
 
 h1 {
   padding-top: 2.5%;
-  font-family: Geo, sans-serif;
-  font-size: 6.5em;
+  font-family: fantasy;
+  font-size: 10.5em;
   font-weight: bold;
-  color: blue;
+  color: rgb(253, 92, 119);
 }
 
 h2 {
@@ -98,11 +61,12 @@ h3 {
 
 #start {
   margin-top: 10%;
-  background: pink;
-  border: 2px solid blue;
+  background: rgb(137, 243, 137);
+  border: 2px solid rgb(172, 243, 172);
+  max-width: 10%;
 }
 
 button:hover {
-  background: pink;
-  border: 2px solid blue;
+  background: rgb(137, 243, 137);
+  border: 2px solid rgb(172, 243, 172);
 }
