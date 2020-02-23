@@ -66,6 +66,7 @@ button {
 
 button:hover {
   background: white;
+  border: 2px solid rgba(188, 222, 241, 0.493);
 }
 
 img {
