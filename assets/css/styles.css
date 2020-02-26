@@ -69,7 +69,12 @@ button:hover {
   border: 2px solid rgba(188, 222, 241, 0.493);
 }
 
+
 img {
-  height: 200px;
+  margin: auto;
+  width: auto;
+  height: 40%;
+  max-width: 95%;
+  /* max-height: 50%; */
   margin-top: 10%;
 }

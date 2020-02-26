@@ -85,57 +85,64 @@ var questions = [{
   question: "What state is the Boston Terrier the official dog of?",
   answers: ["Texas", "Massachusetts", "New York", "Washington"],
   correctAnswer: "Massachusetts",
-  image: "assets/images/bostonUniversity.png"
+  image: "assets/images/daisy.jpg",
+  caption: "Jane Doe 'Daisy'"
 }, {
   question: "What year was the breed recognized by the AKC?",
   answers: ["1933", "2016", "1771", "1893"],
   correctAnswer: "1893",
-  image: "assets/images/vintageBt.jpg"
+  image: "assets/images/basil.jpg",
+  caption: "Jane Doe 'Daisy'"
 }, {
   question: "What is the Boston Terrier's official nicname?",
   answers: ["American gentleman", "Pug's cousin", "Tuxedo dog", "Penguin dog"],
   correctAnswer: "American gentleman",
-  image: "assets/images/dapperBoston.jpg"
+  image: "assets/images/cheerioVicky.jpg",
+  caption: "Sarah Lopez 'Miss Vicky'"
 }, {
   question: "Which group do Boston Terriers belong to?",
   answers: ["Toy", "Terrier", "Non-sporting", "Herding"],
   correctAnswer: "Non-sporting",
-  image: "assets/images/btNonsporting.jpg"
+  image: "assets/images/lilo.jpg",
+  caption: "Jennifer Johnson Deoliveira 'Lilo'"
 }, {
   question: "Which of the following is the most commonly reported biological feature of Boston Terriers?",
   answers: ["Excellent sight", "Flatulence", "Long tail", "Large size"],
   correctAnswer: "Flatulence",
-  image: "assets/images/bostonToot.jpg"
- }, {
+  image: "assets/images/brutus.jpg",
+  caption: "Jane Doe 'Daisy'"
+}, {
   question: "What were Boston Terriers originally bred for?",
   answers: ["Fighting", "Ostrich hunting", "Companionship", "Lap warming"],
   correctAnswer: "Fighting",
-  image: "assets/images/bostonToot.jpg"
+  image: "assets/images/hugo.jpg",
+  caption: "Jane Doe 'Daisy'"
 },
 {
   question: "True or false: The Boston terrier was the first official breed created in the United States.",
   answers: ["True", "False"],
   correctAnswer: "True",
-  image: "assets/images/bostonToot.jpg"
+  image: "assets/images/sweetie.jpg",
+  caption: "Jane Doe 'Daisy'"
 },
 {
   question: "Which American president had two Boston Terriers named Fleck and Spot?",
   answers: ["Herbert Hoover", "John F. Kennedy", "William Howard Taft", "Gerald Ford"],
   correctAnswer: "Gerald Ford",
-  image: "assets/images/bostonToot.jpg"
+  image: "assets/images/liloPup1.jpg",
+  caption: "Jennifer Johnson Deoliveira 'Zeus'"
 }];
 
 // Variable to hold our setInterval
 var timer;
 
 var game = {
-
   questions: questions,
   currentQuestion: 0,
   counter: countStartNumber,
   correct: 0,
   incorrect: 0,
-
+  
   countdown: function () {
     game.counter--;
     $("#counter-number").text(game.counter);
@@ -144,32 +151,32 @@ var game = {
       game.timeUp();
     }
   },
-
+  
   loadQuestion: function () {
     timer = setInterval(game.countdown, 1000);
     card.html("<h2>" + questions[this.currentQuestion].question + "</h2>");
-
+    
     for (var i = 0; i < questions[this.currentQuestion].answers.length; i++) {
       card.append("<button class='answer-button' id='button' data-name='" + questions[this.currentQuestion].answers[i]
-        + "'>" + questions[this.currentQuestion].answers[i] + "</button>");
+      + "'>" + questions[this.currentQuestion].answers[i] + "</button>");
     }
   },
-
+  
   nextQuestion: function () {
     game.counter = countStartNumber;
     $("#counter-number").text(game.counter);
     game.currentQuestion++;
     game.loadQuestion();
   },
-
+  
   timeUp: function () {
     clearInterval(timer);
     $("#counter-number").html(game.counter);
-
+    
     card.html("<h2>Out of Time!</h2>");
     card.append("<h3>The Correct Answer was: " + questions[this.currentQuestion].correctAnswer);
     card.append("<img src='" + questions[this.currentQuestion].image + "' />");
-
+    
     if (game.currentQuestion === questions.length - 1) {
       setTimeout(game.results, 3 * 1000);
     }
@@ -177,18 +184,18 @@ var game = {
       setTimeout(game.nextQuestion, 3 * 1000);
     }
   },
-
+  
   results: function () {
     clearInterval(timer);
     card.html("<h2>All done, heres how you did!</h2>");
     $("#counter-number").text(game.counter);
-
+    
     card.append("<h3>Correct Answers: " + game.correct + "</h3>");
     card.append("<h3>Incorrect Answers: " + game.incorrect + "</h3>");
     card.append("<h3>Unanswered: " + (questions.length - (game.incorrect + game.correct)) + "</h3>");
     card.append("<br><button id='start-over'>Start Over?</button>");
   },
-
+  
   clicked: function (e) {
     clearInterval(timer);
     if ($(e.target).attr("data-name") === questions[this.currentQuestion].correctAnswer) {
@@ -198,13 +205,14 @@ var game = {
       this.answeredIncorrectly();
     }
   },
-
+  
   answeredIncorrectly: function () {
     game.incorrect++;
     clearInterval(timer);
     card.html("<h2>Nope!</h2>");
     card.append("<h3>The Correct Answer was: " + questions[game.currentQuestion].correctAnswer + "</h3>");
     card.append("<img src='" + questions[game.currentQuestion].image + "' />");
+    card.append("<h5> Photo by: " + questions[game.currentQuestion].caption + "</h5>");
 
     if (game.currentQuestion === questions.length - 1) {
       setTimeout(game.results, 3 * 1000);
@@ -213,13 +221,14 @@ var game = {
       setTimeout(game.nextQuestion, 3 * 1000);
     }
   },
-
+  
   answeredCorrectly: function () {
     clearInterval(timer);
     game.correct++;
     card.html("<h2>Correct!</h2>");
     card.append("<img src='" + questions[game.currentQuestion].image + "' />");
-
+    card.append("<h5> Photo by: " + questions[game.currentQuestion].caption + "</h5>");
+    
     if (game.currentQuestion === questions.length - 1) {
       setTimeout(game.results, 3 * 1000);
     }
@@ -227,7 +236,7 @@ var game = {
       setTimeout(game.nextQuestion, 3 * 1000);
     }
   },
-
+  
   reset: function () {
     this.currentQuestion = 0;
     this.counter = countStartNumber;
