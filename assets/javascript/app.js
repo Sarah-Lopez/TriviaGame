@@ -86,51 +86,51 @@ var questions = [{
   answers: ["Texas", "Massachusetts", "New York", "Washington"],
   correctAnswer: "Massachusetts",
   image: "assets/images/daisy.jpg",
-  caption: "Jane Doe 'Daisy'"
+  caption: "Brynn Finnimore-Ladd - Daisy"
 }, {
   question: "What year was the breed recognized by the AKC?",
   answers: ["1933", "2016", "1771", "1893"],
   correctAnswer: "1893",
   image: "assets/images/basil.jpg",
-  caption: "Jane Doe 'Daisy'"
+  caption: "Gerri Gallup - Basil"
 }, {
   question: "What is the Boston Terrier's official nicname?",
   answers: ["American gentleman", "Pug's cousin", "Tuxedo dog", "Penguin dog"],
   correctAnswer: "American gentleman",
   image: "assets/images/cheerioVicky.jpg",
-  caption: "Sarah Lopez 'Miss Vicky'"
+  caption: "Sarah Lopez - Miss Vicky"
 }, {
   question: "Which group do Boston Terriers belong to?",
   answers: ["Toy", "Terrier", "Non-sporting", "Herding"],
   correctAnswer: "Non-sporting",
   image: "assets/images/lilo.jpg",
-  caption: "Jennifer Johnson Deoliveira 'Lilo'"
+  caption: "Jennifer Johnson Deoliveira - Lilo"
 }, {
   question: "Which of the following is the most commonly reported biological feature of Boston Terriers?",
   answers: ["Excellent sight", "Flatulence", "Long tail", "Large size"],
   correctAnswer: "Flatulence",
   image: "assets/images/brutus.jpg",
-  caption: "Jane Doe 'Daisy'"
+  caption: "Brynn Finnimore-Ladd - Brutus"
 }, {
   question: "What were Boston Terriers originally bred for?",
   answers: ["Fighting", "Ostrich hunting", "Companionship", "Lap warming"],
   correctAnswer: "Fighting",
   image: "assets/images/hugo.jpg",
-  caption: "Jane Doe 'Daisy'"
+  caption: "Brannon Dagilas - Hugo"
 },
 {
   question: "True or false: The Boston terrier was the first official breed created in the United States.",
   answers: ["True", "False"],
   correctAnswer: "True",
   image: "assets/images/sweetie.jpg",
-  caption: "Jane Doe 'Daisy'"
+  caption: "Lea Martin - Sweetie"
 },
 {
   question: "Which American president had two Boston Terriers named Fleck and Spot?",
   answers: ["Herbert Hoover", "John F. Kennedy", "William Howard Taft", "Gerald Ford"],
   correctAnswer: "Gerald Ford",
   image: "assets/images/liloPup1.jpg",
-  caption: "Jennifer Johnson Deoliveira 'Zeus'"
+  caption: "Jennifer Johnson Deoliveira - Zeus"
 }];
 
 // Variable to hold our setInterval
@@ -154,7 +154,7 @@ var game = {
   
   loadQuestion: function () {
     timer = setInterval(game.countdown, 1000);
-    card.html("<h2>" + questions[this.currentQuestion].question + "</h2>");
+    card.html("<h3>" + questions[this.currentQuestion].question + "</h3>");
     
     for (var i = 0; i < questions[this.currentQuestion].answers.length; i++) {
       card.append("<button class='answer-button' id='button' data-name='" + questions[this.currentQuestion].answers[i]
@@ -212,7 +212,7 @@ var game = {
     card.html("<h2>Nope!</h2>");
     card.append("<h3>The Correct Answer was: " + questions[game.currentQuestion].correctAnswer + "</h3>");
     card.append("<img src='" + questions[game.currentQuestion].image + "' />");
-    card.append("<h5> Photo by: " + questions[game.currentQuestion].caption + "</h5>");
+    card.append("<p> Photo by " + questions[game.currentQuestion].caption + "</p>");
 
     if (game.currentQuestion === questions.length - 1) {
       setTimeout(game.results, 3 * 1000);
@@ -227,7 +227,7 @@ var game = {
     game.correct++;
     card.html("<h2>Correct!</h2>");
     card.append("<img src='" + questions[game.currentQuestion].image + "' />");
-    card.append("<h5> Photo by: " + questions[game.currentQuestion].caption + "</h5>");
+    card.append("<p> Photo by " + questions[game.currentQuestion].caption + "</p>");
     
     if (game.currentQuestion === questions.length - 1) {
       setTimeout(game.results, 3 * 1000);
