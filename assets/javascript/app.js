@@ -215,10 +215,10 @@ var game = {
     card.append("<p> Photo by " + questions[game.currentQuestion].caption + "</p>");
 
     if (game.currentQuestion === questions.length - 1) {
-      setTimeout(game.results, 3 * 1000);
+      setTimeout(game.results, 3 * 1500);
     }
     else {
-      setTimeout(game.nextQuestion, 3 * 1000);
+      setTimeout(game.nextQuestion, 3 * 1500);
     }
   },
   
@@ -230,10 +230,10 @@ var game = {
     card.append("<p> Photo by " + questions[game.currentQuestion].caption + "</p>");
     
     if (game.currentQuestion === questions.length - 1) {
-      setTimeout(game.results, 3 * 1000);
+      setTimeout(game.results, 3 * 1500);
     }
     else {
-      setTimeout(game.nextQuestion, 3 * 1000);
+      setTimeout(game.nextQuestion, 3 * 1500);
     }
   },
   
