@@ -1,7 +1,7 @@
 # TriviaGame
 
-Uses HTML, CSS, Bootstrap, Javascript, and Jquery.
+Uses HTML, CSS, Bootstrap, Javascript, Jquery, and Giphy API.<br><br>
 
-This quiz uses radio buttons and a timer to test the user on their Boston Terrier trivia!
-When time is up, the player's correct, incorrect, and unanswered questions are tallied and
-displayed.
+This app uses the Giphy API to make a dynamic web page that populates
+with gifs of lovable pooches. Ten breeds are represented with their own button, and ten gifs are displayed per click. Each new batch of gifs are
+prepended to the others. Users may also enter a new breed.
